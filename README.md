@@ -16,4 +16,10 @@ Besides the notes, there are a few scripts, written in the Julia programming lan
 
 ## Cool supplementary materials!
 
-- [OpenStax's Calculus III](https://openstax.org/details/books/c%C3%A1lculo-volumen-3)
+- OpenStax's Calculus III [Spanish](https://openstax.org/details/books/c%C3%A1lculo-volumen-3) [English](https://openstax.org/details/books/calculus-volume-3)
+
+
+### Suplementary software
+
+- [CalcPlot 3D](https://c3d.libretexts.org/CalcPlot3D/index.html)
+- [Julia](https://julialang.org/)
