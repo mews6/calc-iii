@@ -13,3 +13,7 @@ The original license for this template is [CC BY-NC-SA 3.0 Deed](https://creativ
 ## Julia Scripts
 
 Besides the notes, there are a few scripts, written in the Julia programming language, that you might found useful. These scripts will mostly correspond to graphs in the main notes, and can be accessed on their own if need be.
+
+## Cool supplementary materials!
+
+- [OpenStax's Calculus III](https://openstax.org/details/books/c%C3%A1lculo-volumen-3)
