@@ -93,4 +93,148 @@
 
 \chapter{Introduction}
 
+This is the persons i took the course with, they speak mostly spanish but they might help you!
+\begin{itemize}
+    \item Andres Angel (ja.angel908@uniandes.edu.co)    
+\end{itemize}
+
+\chapter{Linear Algebra Fundamentals}
+
+In order to understand the concepts present in this module of calculus, a few preliminary concepts
+in the realm of Linear Algebra are necessary, in order to not leave anybody lost, we'll be reviewing those topics.
+
+\section{Lines}
+
+A line is simply a mathematical object of the form $ y = mx + b $ that unites two points in the space we're using, through a straight path, where and b is the cutting point in x=0.
+and m is $\tan{\alpha}$, or the slope of this line. We can imagine it as:
+
+\begin{gather}
+    m = \frac{y_1 - y_0}{x_1 - x_0} \\
+\end{gather}
+
+another equation of this object is, when working on $\mathbb{R}^2$
+is defined as:
+
+\begin{gather}
+    ax + by = c
+\end{gather}
+
+The reason this sort of expression is so useful, is because this \textbf{is a general form.} In other words, we can define with this system every single possible line in $\mathbb{R^2}$.
+For example, let's imagine a line that is perfectly vertical. Such as it can be explained, intuitively, as $x = 1$:
+
+%Image 1
+
+This vector can't be expressed through formula 1,1 or y = mx + b, because it wouldn't cross the '0' axis, and it would have an infinite slope. But if we arrange it through (1,2), we can say:
+
+\begin{gather}
+ax + by = c\\
+by = c - ax\\
+y = \frac{c}{b} + \frac{a}{b} x
+\end{gather}
+
+
+We can suppouse $\frac{c}{b}$ as the cutting point with y, and then imagine $\frac{a}{b}$ as 'm', we can then, use an example where we set 'b' to be 0
+and define a situation where x = 1.
+
+\subsection{Lines in $\mathbb{R}^n$}
+
+We can define lines in more dimensions than $\mathbb{R}^2$
+through different forms. For example, we can imagine it as a parametric equation of the form:
+
+\begin{gather}
+    p = t\vec{v}
+\end{gather}
+
+\paragraph*{Example 2.1.1}
+
+Find the parametric equation that passes through p = (1,2,3) and is parallel to the vector (1,0,-1)
+
+\textit{\textbf{Solution}}
+\begin{gather}
+    \begin{pmatrix}
+        1 \\ 2 \\ 3
+    \end{pmatrix} + t \begin{pmatrix}
+        1 \\0 \\-1
+    \end{pmatrix}
+\end{gather}
+
+With this form, we can imagine that the solution actually is producing 3 different equations, and every single one defines how this object will behave in a different dimension.
+
+therefore:
+
+\begin{gather}
+    x(t) = 1 + t \\ 
+    y(t) = 2 \\
+    z(t) = 3-t
+\end{gather}
+
+Pretty neat, huh?
+
+We can define such an equation in 'n' dimensions that can define a line going through be it a plane or a hyperplane like this. We only need two vectors of the same 'n' dimension.
+So, taking this form, can we express it in other ways? Well, yeah! ...and we just did. 
+the equation we generated
+
+
+From here, we can also imagine that instead of using such a form, we can also equate everything to 't' and from here, we'll start defining a \textbf{Symetrical form of the line.}
+
+In the previous example, we can imagine:
+\begin{gather}
+    x - 1 = y - 2 = \frac{z-3}{-1} = t    
+\end{gather}
+
+\section{Planes}
+
+The plane can be defined as:
+
+\begin{gather}
+    ax + by + cz = d
+\end{gather}
+
+This plane can be defined with a point and a vector, for example:
+
+\paragraph*{Example 2.2.1}
+given $\vec{PQ} = (x,y,z)$ and $\vec{R} = (a,b,c)$, define a plane.
+
+\textit{\textbf{Solution}}
+
+\begin{gather}
+    \begin{pmatrix}
+        x - x_0 \\ y = y_0 \\ z - z_0
+    \end{pmatrix} \cdot \begin{pmatrix}
+        a\\b\\c
+    \end{pmatrix} = 0\\
+    a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \\
+    ax - ax_0 + by - by_0 + cz - cz_0 = 0 \\
+    ax + by + cz = ax_0 + by_0 + cz_0\\
+    <d = ax_0 + by_0 + cz_0> \\
+    ax + by + cz = d
+\end{gather}
+
+And from there we can define basically every plane in $\mathbb{R}^3$, as you can see, we arrived to the way we defined a plane in this dimension, and we could in theory, decide in a random point, a random vector, and start working from there into defining a plane.
+But now, can we define a parametric equation of a plane, as we did with a line?
+
+Well, the answer is yes.
+
+the parametric form of a plane is actually pretty simple, as it is supremely similar to 
+the one that defines a line, and is defined as:
+\begin{gather}
+    p + s\vec{v_1} + t \vec{v_2}
+\end{gather}
+
+if we generalize this into a system where R = (1,2,3), $v_1$ = (1,0,1) and $v_2$ = (1,1,0)
+we can do a little example, written as:
+
+\begin{gather}
+    \begin{pmatrix}
+        1\\2\\3
+    \end{pmatrix} + s \begin{pmatrix}
+        1\\0\\-1
+    \end{pmatrix} + t\begin{pmatrix}
+        1\\1\\0
+    \end{pmatrix}
+\end{gather}
+
+\section{Vectors}
+
+
 \end{document}
