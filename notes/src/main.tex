@@ -95,7 +95,8 @@
 
 This is the persons i took the course with, they speak mostly spanish but they might help you!
 \begin{itemize}
-    \item Andres Angel (ja.angel908@uniandes.edu.co)    
+    \item Andres Angel (ja.angel908@uniandes.edu.co) 
+    \item Hector Mora (hg.mora@uniandes.edu.co)   
 \end{itemize}
 
 \chapter{Linear Algebra Fundamentals}
@@ -171,7 +172,7 @@ therefore:
 Pretty neat, huh?
 
 We can define such an equation in 'n' dimensions that can define a line going through be it a plane or a hyperplane like this. We only need two vectors of the same 'n' dimension.
-So, taking this form, can we express it in other ways? Well, yeah! ...and we just did. 
+So, taking this form, can we express it in other ways? Well, yeah! ...and we just did. The before introduced equations can be called \textbf{the parametric equation of a line.}
 the equation we generated
 
 
@@ -234,7 +235,63 @@ we can do a little example, written as:
     \end{pmatrix}
 \end{gather}
 
-\section{Vectors}
+\subsection*{Plane from 3 points in the space}
 
+\section{Vectors}
+\subsection{Important operations}
+\subsubsection{Addition and Subtraction}
+Not much mystery to it, you can add and subtract the components in two different vectors:
+
+\begin{gather*}
+    \begin{pmatrix}
+        x_1 \\ y_1 \\ z_1
+    \end{pmatrix}
+    +
+    \begin{pmatrix}
+        x_2 \\ y_2 \\ z_2
+    \end{pmatrix} =
+    \begin{pmatrix}
+        x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
+    \end{pmatrix} 
+\end{gather*}
+
+\subsubsection{Dot Product}
+
+We can get a scalar product from the multiplication of the elements two vectors have
+\begin{gather*}
+    \begin{pmatrix}
+        x_1 \\ y_1 \\ z_1
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x_2 \\ y_2 \\ z_2
+    \end{pmatrix} = x_1 x_2 + y_1 y_2 + z_1 z_2
+\end{gather*}
+
+\subsubsection{Cross product}
+
+Another form to multiply vectors, while getting another vector, is the cross prudict which we define as:
+
+\begin{gather*}
+    \begin{pmatrix}
+        x_1 \\ y_1 \\ z_1
+    \end{pmatrix}
+    x
+    \begin{pmatrix}
+        x_2 \\ y_2 \\ z_2
+    \end{pmatrix} = \begin{pmatrix}
+        y_1 z_2 -z_1 y_2 \\ - (x_1 z_2 - z_1 x_2) \\ x_1 y_2 - y_1 x_2
+    \end{pmatrix}
+\end{gather*}
+
+\section{Properties}
+\begin{itemize}
+    \item two vectors are parallel if one is a multiple of the other, such as:
+    $$\vec{v} = d\vec{w} ; d \in \mathbb{R}$$
+    \item The angle between two vectors can be defined as such:
+    $$\vec{v}\cdot\vec{w}=||\vec{v}|| ||\vec{w}|| \cos{\theta}$$
+    If this operation is 0, then the two vectors are orthogonal (parallel) to each other.
+    \item The cross product of two vectors is perpendicular to both vectors that generated it.
+\end{itemize}
 
 \end{document}
