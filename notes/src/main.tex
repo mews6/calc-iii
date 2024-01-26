@@ -104,139 +104,6 @@ This is the persons i took the course with, they speak mostly spanish but they m
 In order to understand the concepts present in this module of calculus, a few preliminary concepts
 in the realm of Linear Algebra are necessary, in order to not leave anybody lost, we'll be reviewing those topics.
 
-\section{Lines}
-
-A line is simply a mathematical object of the form $ y = mx + b $ that unites two points in the space we're using, through a straight path, where and b is the cutting point in x=0.
-and m is $\tan{\alpha}$, or the slope of this line. We can imagine it as:
-
-\begin{gather}
-    m = \frac{y_1 - y_0}{x_1 - x_0} \\
-\end{gather}
-
-another equation of this object is, when working on $\mathbb{R}^2$
-is defined as:
-
-\begin{gather}
-    ax + by = c
-\end{gather}
-
-The reason this sort of expression is so useful, is because this \textbf{is a general form.} In other words, we can define with this system every single possible line in $\mathbb{R^2}$.
-For example, let's imagine a line that is perfectly vertical. Such as it can be explained, intuitively, as $x = 1$:
-
-%Image 1
-
-This vector can't be expressed through formula 1,1 or y = mx + b, because it wouldn't cross the '0' axis, and it would have an infinite slope. But if we arrange it through (1,2), we can say:
-
-\begin{gather}
-ax + by = c\\
-by = c - ax\\
-y = \frac{c}{b} + \frac{a}{b} x
-\end{gather}
-
-
-We can suppouse $\frac{c}{b}$ as the cutting point with y, and then imagine $\frac{a}{b}$ as 'm', we can then, use an example where we set 'b' to be 0
-and define a situation where x = 1.
-
-\subsection{Lines in $\mathbb{R}^n$}
-
-We can define lines in more dimensions than $\mathbb{R}^2$
-through different forms. For example, we can imagine it as a parametric equation of the form:
-
-\begin{gather}
-    p = t\vec{v}
-\end{gather}
-
-\paragraph*{Example 2.1.1}
-
-Find the parametric equation that passes through p = (1,2,3) and is parallel to the vector (1,0,-1)
-
-\textit{\textbf{Solution}}
-\begin{gather}
-    \begin{pmatrix}
-        1 \\ 2 \\ 3
-    \end{pmatrix} + t \begin{pmatrix}
-        1 \\0 \\-1
-    \end{pmatrix}
-\end{gather}
-
-With this form, we can imagine that the solution actually is producing 3 different equations, and every single one defines how this object will behave in a different dimension.
-
-therefore:
-
-\begin{gather}
-    x(t) = 1 + t \\ 
-    y(t) = 2 \\
-    z(t) = 3-t
-\end{gather}
-
-Pretty neat, huh?
-
-We can define such an equation in 'n' dimensions that can define a line going through be it a plane or a hyperplane like this. We only need two vectors of the same 'n' dimension.
-So, taking this form, can we express it in other ways? Well, yeah! ...and we just did. The before introduced equations can be called \textbf{the parametric equation of a line.}
-the equation we generated
-
-
-From here, we can also imagine that instead of using such a form, we can also equate everything to 't' and from here, we'll start defining a \textbf{Symetrical form of the line.}
-
-In the previous example, we can imagine:
-\begin{gather}
-    x - 1 = y - 2 = \frac{z-3}{-1} = t    
-\end{gather}
-
-\section{Planes}
-
-The plane can be defined as:
-
-\begin{gather}
-    ax + by + cz = d
-\end{gather}
-
-This plane can be defined with a point and a vector, for example:
-
-\paragraph*{Example 2.2.1}
-given $\vec{PQ} = (x,y,z)$ and $\vec{R} = (a,b,c)$, define a plane.
-
-\textit{\textbf{Solution}}
-
-\begin{gather}
-    \begin{pmatrix}
-        x - x_0 \\ y = y_0 \\ z - z_0
-    \end{pmatrix} \cdot \begin{pmatrix}
-        a\\b\\c
-    \end{pmatrix} = 0\\
-    a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \\
-    ax - ax_0 + by - by_0 + cz - cz_0 = 0 \\
-    ax + by + cz = ax_0 + by_0 + cz_0\\
-    <d = ax_0 + by_0 + cz_0> \\
-    ax + by + cz = d
-\end{gather}
-
-And from there we can define basically every plane in $\mathbb{R}^3$, as you can see, we arrived to the way we defined a plane in this dimension, and we could in theory, decide in a random point, a random vector, and start working from there into defining a plane.
-But now, can we define a parametric equation of a plane, as we did with a line?
-
-Well, the answer is yes.
-
-the parametric form of a plane is actually pretty simple, as it is supremely similar to 
-the one that defines a line, and is defined as:
-\begin{gather}
-    p + s\vec{v_1} + t \vec{v_2}
-\end{gather}
-
-if we generalize this into a system where R = (1,2,3), $v_1$ = (1,0,1) and $v_2$ = (1,1,0)
-we can do a little example, written as:
-
-\begin{gather}
-    \begin{pmatrix}
-        1\\2\\3
-    \end{pmatrix} + s \begin{pmatrix}
-        1\\0\\-1
-    \end{pmatrix} + t\begin{pmatrix}
-        1\\1\\0
-    \end{pmatrix}
-\end{gather}
-
-\subsection*{Plane from 3 points in the space}
-
 \section{Vectors}
 \subsection{Important operations}
 \subsubsection{Addition and Subtraction}
@@ -380,6 +247,7 @@ As given by our last example, then:
     A_\triangle = \frac{||(3,6,2)||}{2} = \frac{\sqrt{3^2+6^2+2^2}}{2} = \frac{\sqrt{9+36+4}}{2} = \frac{7}{2} 
 \end{gather}
 
+
 \subsubsection{Projection}
 
 A proyection is the vector that can be found from making 
@@ -427,7 +295,7 @@ lets instantiate the lines in a moment in time where they are both crossing the 
 \end{gather}
 
 
-\section{Properties}
+\subsection{Properties}
 \begin{itemize}
     \item two vectors are parallel if one is a multiple of the other, such as:
     $$\vec{v} = d\vec{w} ; d \in \mathbb{R}$$
@@ -437,14 +305,317 @@ lets instantiate the lines in a moment in time where they are both crossing the 
     \item The cross product of two vectors is perpendicular to both vectors that generated it.
 \end{itemize}
 
+\section{Lines}
+
+A line is simply a mathematical object of the form $ y = mx + b $ that unites two points in the space we're using, through a straight path, where and b is the cutting point in x=0.
+and m is $\tan{\alpha}$, or the slope of this line. We can imagine it as:
+
+\begin{gather}
+    m = \frac{y_1 - y_0}{x_1 - x_0} \\
+\end{gather}
+
+another equation of this object is, when working on $\mathbb{R}^2$
+is defined as:
+
+\begin{gather}
+    ax + by = c
+\end{gather}
+
+The reason this sort of expression is so useful, is because this \textbf{is a general form.} In other words, we can define with this system every single possible line in $\mathbb{R^2}$.
+For example, let's imagine a line that is perfectly vertical. Such as it can be explained, intuitively, as $x = 1$:
+
+%Image 1
+
+This vector can't be expressed through formula 1,1 or y = mx + b, because it wouldn't cross the '0' axis, and it would have an infinite slope. But if we arrange it through (1,2), we can say:
+
+\begin{gather}
+ax + by = c\\
+by = c - ax\\
+y = \frac{c}{b} + \frac{a}{b} x
+\end{gather}
+
+
+We can suppouse $\frac{c}{b}$ as the cutting point with y, and then imagine $\frac{a}{b}$ as 'm', we can then, use an example where we set 'b' to be 0
+and define a situation where x = 1.
+
+\subsection{Lines in $\mathbb{R}^n$}
+
+We can define lines in more dimensions than $\mathbb{R}^2$
+through different forms. For example, we can imagine it as a parametric equation of the form:
+
+\begin{gather}
+    p = t\vec{v}
+\end{gather}
+
+\paragraph*{Example 2.2.1}
+
+Find the parametric equation that passes through p = (1,2,3) and is parallel to the vector (1,0,-1)
+
+\textit{\textbf{Solution}}
+\begin{gather}
+    \begin{pmatrix}
+        1 \\ 2 \\ 3
+    \end{pmatrix} + t \begin{pmatrix}
+        1 \\0 \\-1
+    \end{pmatrix}
+\end{gather}
+
+With this form, we can imagine that the solution actually is producing 3 different equations, and every single one defines how this object will behave in a different dimension.
+
+therefore:
+
+\begin{gather}
+    x(t) = 1 + t \\ 
+    y(t) = 2 \\
+    z(t) = 3-t
+\end{gather}
+
+Pretty neat, huh?
+
+We can define such an equation in 'n' dimensions that can define a line going through be it a plane or a hyperplane like this. We only need two vectors of the same 'n' dimension.
+So, taking this form, can we express it in other ways? Well, yeah! ...and we just did. The before introduced equations can be called \textbf{the parametric equation of a line.}
+the equation we generated
+
+
+From here, we can also imagine that instead of using such a form, we can also equate everything to 't' and from here, we'll start defining a \textbf{Symetrical form of the line.}
+
+In the previous example, we can imagine:
+\begin{gather}
+    x - 1 = y - 2 = \frac{z-3}{-1} = t    
+\end{gather}
+
+\section{Planes}
+
+The plane can be defined as:
+
+\begin{gather}
+    ax + by + cz = d
+\end{gather}
+
+This plane can be defined with a point and a vector, for example:
+
+\paragraph*{Example 2.3.1}
+given $\vec{PQ} = (x,y,z)$ and $\vec{R} = (a,b,c)$, define a plane.
+
+\textit{\textbf{Solution}}
+
+\begin{gather}
+    \begin{pmatrix}
+        x - x_0 \\ y = y_0 \\ z - z_0
+    \end{pmatrix} \cdot \begin{pmatrix}
+        a\\b\\c
+    \end{pmatrix} = 0\\
+    a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 \\
+    ax - ax_0 + by - by_0 + cz - cz_0 = 0 \\
+    ax + by + cz = ax_0 + by_0 + cz_0\\
+    <d = ax_0 + by_0 + cz_0> \\
+    ax + by + cz = d
+\end{gather}
+
+And from there we can define basically every plane in $\mathbb{R}^3$, as you can see, we arrived to the way we defined a plane in this dimension, and we could in theory, decide in a random point, a random vector, and start working from there into defining a plane.
+But now, can we define a parametric equation of a plane, as we did with a line?
+
+Well, the answer is yes.
+
+the parametric form of a plane is actually pretty simple, as it is supremely similar to 
+the one that defines a line, and is defined as:
+\begin{gather}
+    p + s\vec{v_1} + t \vec{v_2}
+\end{gather}
+
+if we generalize this into a system where R = (1,2,3), $v_1$ = (1,0,1) and $v_2$ = (1,1,0)
+we can do a little example, written as:
+
+\begin{gather}
+    \begin{pmatrix}
+        1\\2\\3
+    \end{pmatrix} + s \begin{pmatrix}
+        1\\0\\-1
+    \end{pmatrix} + t\begin{pmatrix}
+        1\\1\\0
+    \end{pmatrix}
+\end{gather}
+
+\paragraph{Example 2.3.2}
+
+Determine if the line 
+\begin{gather}
+    x = 9+5t\\
+    y = -3+t\\
+    z= 4t
+\end{gather}
+
+Intersects with the plane
+
+\begin{gather}
+    3x + 10y -2z+ 53
+\end{gather}
+
+If so, determine where.
+
+\textit{\textbf{Solution}}
+
+We can begin by replacing. Remember the line's equation and how it has x, y and z values.
+\textbf{These values are equivalent to x, y and z in a plane}, and how you can replace it
+in the plane's equation.
+
+If we can solve the equation for
+'t', that means we can intersect that line with the 
+plane and that it will intersect in that specific 't' point
+
+\begin{gather}
+    3(9 + 5t) + 10 (-3 + t) -2(4t) =53\\
+    27 + 15t -30 + 10t -8t = 53\\
+    t = \frac{56}{16} 
+\end{gather}
+
+\subsection*{Plane from 3 points in the space}
+
+\paragraph{Example 2.3.3}
+
+Find the line normal to the plane that crosses the points:
+\begin{gather}
+    P = (0,-3,-3)\\
+    Q = (-3,0,-3)\\
+    R = (-3,3,0)
+\end{gather}
+
+\textit{\textbf{Solution}}
+We'll begin by getting two vectors from these lines, we can get them by subtracting one point from the other:
+\begin{gather}
+    \vec{PQ} = (-3,3,0)\\
+    \vec{QR} = (0,-3,3)
+\end{gather}
+
+And now, we'll make a cross product between the two, so we can get a normal vector:
+
+\begin{gather}
+    \vec{PQ} x \vec{QR} = \begin{pmatrix}
+        -3\\3\\0
+    \end{pmatrix} x \begin{pmatrix}
+        0\\-3\\3
+    \end{pmatrix} = \begin{pmatrix}
+        9\\9\\9
+    \end{pmatrix} = \vec{n}
+\end{gather}
+
+Now, we can get from that normal vector, the direction vector for the line:
+
+\begin{gather}
+    \begin{pmatrix}
+        x\\y\\z
+    \end{pmatrix} = 
+    \begin{pmatrix}
+        0\\-3\\-3
+    \end{pmatrix} + t\begin{pmatrix}
+        9\\9\\9
+    \end{pmatrix}
+\end{gather}
+
+
 \chapter{Non-Linear Fundamentals}
 \section{Polar and Cylindrical Coordinates}
 
 During the course, we'll be managing non-linear systems and such 
-systems will require managing reference systems that are non-cartesian. This is basically 
+systems will require managing reference systems that are non-cartesian.
+When trying to define parts of a line in algebra, we'll usually be looking at
+coordinates, be them polar or cartesian. In either case, their information can be 
+converted to the other system through the following formulas.
 
-\subsection{Polar Coordinates}
+\begin{gather}
+    \begin{cases}
+        \rho = \sqrt{x^2+y^2} \\
+        \theta = \arctan(\frac{y}{x})
+    \end{cases}
+    \text{\textit{cartesian to polar}}\\
+    \begin{cases}
+        \alpha_x = \rho \cos \theta \\
+        \alpha_y = \rho \sin \theta
+    \end{cases}
+    \text{\textit{polar to cartesian}}
+\end{gather}
 
-These can make circles easier to describe. 
+Cartesian coordinates generally translate well to other dimensional spaces, such as would be the case
+for $ \mathbb{R}^3 $, however, polar coordinates as we know them usually aren't as translatable in a direct
+manner, and expressing them in three-dimensional spaces might be better suited to 
+be expressed on a cylindrical or spherical condition. 
+\subsection{Cylindrical coordinates}
+In the case of cylindrical coordinates, the translation is probably the most intuitive, by computing
+a cylinder with polar coordinates that indicate an (x,y) position, and a 'Z' variable indicating height 
+that allows us to project the vector on a third dimension, this 'z' variable is exactly the same as it would be
+on a cartesian model. We can express it like such:
+
+$ \vec{v} = ( \rho, \theta, Z) $
+
+conversion to a cartesian model can be expressed as:
+
+\begin{gather}
+    \vec(\alpha) =
+    \begin{cases}
+        \alpha_x = \rho \cos \theta \\
+        \alpha_y = \rho \sin \theta \\
+        \alpha_z = Z
+    \end{cases}
+    \text{\textit{Cylindrical to cartesian}}
+    \\
+    \vec(\alpha) =
+    \begin{cases}
+        \rho = \sqrt{x^2 + y^2} \\
+        \theta =  \arctan(\frac{y}{x}) \\
+        Z = Z
+    \end{cases}
+    \text{\textit{Cartesian to Cylindrical}}
+\end{gather}
+
+\subsection{Spherical coordinates}
+
+A spherical coordinate is formed by a tuple:
+
+\begin{gather}
+    (\rho, \theta ,\phi);
+    \begin{cases}
+        \rho \geq  0 \\
+        0 \le \theta \le 2\pi \\
+        0 \le \phi \le \pi    
+    \end{cases}
+\end{gather}
+
+Where $ \rho $ is the magnitude of the vector, $\theta$ is the (x,y) coordinates, and
+$\phi$ is the (y,z) angle. They must adhere to the following for it to be geometrically coherent:
+
+\begin{equation}
+    \begin{cases}
+        \rho > 0 \\
+        0 \le \phi \le \pi \\
+        0 \le \theta \le 2\pi
+    \end{cases}
+\end{equation}
+
+this tuple can generate two vectors:
+\begin{equation}
+    \begin{cases}
+        \rho \sin \phi\\
+        \rho
+    \end{cases}
+\end{equation}
+
+And can be converted to a cartesian model as such:
+
+\begin{gather}
+    \vec(\alpha) =
+    \begin{cases}
+        \alpha_x = \rho \sin \phi \cos \theta \\
+        \alpha_y = \rho \sin \phi \sin \theta \\
+        \alpha_z = \rho \cos \phi
+    \end{cases}
+    \text{\textit{Spherical to cartesian}} \\ 
+    \vec(\alpha) =
+    \begin{cases}
+        \rho = \sqrt{x^2 + y^2 + z^2} \\
+        \theta =  \arctan(\frac{y}{x}) \\
+        \phi = \arccos(\frac{z}{\rho})
+    \end{cases}
+    \text{\textit{Cartesian to Spherical}}
+\end{gather}
 
 \end{document}
