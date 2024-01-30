@@ -567,6 +567,10 @@ conversion to a cartesian model can be expressed as:
     \text{\textit{Cartesian to Cylindrical}}
 \end{gather}
 
+These coordinates might be useful to visualize circular 
+functions.
+
+
 \subsection{Spherical coordinates}
 
 A spherical coordinate is formed by a tuple:
@@ -613,9 +617,43 @@ And can be converted to a cartesian model as such:
     \begin{cases}
         \rho = \sqrt{x^2 + y^2 + z^2} \\
         \theta =  \arctan(\frac{y}{x}) \\
-        \phi = \arccos(\frac{z}{\rho})
+        \phi = \arccos(\frac{z}{\sqrt{x^2+y^2+z^2}})
     \end{cases}
     \text{\textit{Cartesian to Spherical}}
 \end{gather}
+
+These are, of course, pretty useful to visualize spherical objects, but conic objects can also be easily expressed with this reference system.
+
+\section{Multiple Variable Functions}
+
+For this course, there are moments in which we might manage more than a single variable on a single mathematical expression. 
+We can imagine that there are functions can be defined as: 
+
+\begin{gather}
+    f(x) \underbrace{U}_{Domain} \in \mathbb{R}^n \to \mathbb{R}^n
+\end{gather}
+
+This basically means, they're not nescessarily defined in an entire dimension, but on a part of it.
+
+Examples for this sort of function in $\mathbb{R}^2$ include:
+
+\begin{gather}
+    f(x,y) = x+y \\
+    f(x,y) = x^2 + y^2 \\
+    f(x,y) = e^{x^2y + y}
+\end{gather}
+
+We're going to like $\mathbb{R}^2 $ expressions on this course because they allow us to think of those functions in terms of a graphical representation on $\mathbb{R}^3$.
+z will depend on both variables. We write this formally as:
+
+\begin{gather}
+    \{ (x,y,z) \in \mathbb{R}^3 | z = f(x,y) \}
+\end{gather}
+
+\paragraph{Example}
+
+\section{Surface Curves}
+
+A surface curve, as defined for $\mathbb{R}^3$, can be defined as 
 
 \end{document}
