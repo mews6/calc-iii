@@ -624,16 +624,16 @@ And can be converted to a cartesian model as such:
 
 These are, of course, pretty useful to visualize spherical objects, but conic objects can also be easily expressed with this reference system.
 
-\section{Multiple Variable Functions}
+\section{Scalar Functions}
 
 For this course, there are moments in which we might manage more than a single variable on a single mathematical expression. 
 We can imagine that there are functions can be defined as: 
 
 \begin{gather}
-    f(x) \underbrace{U}_{Domain} \in \mathbb{R}^n \to \mathbb{R}^n
+    f(x_1, \dots, x_n) \underbrace{U}_{Domain} : \mathbb{R}^n \to \mathbb{R}
 \end{gather}
 
-This basically means, they're not nescessarily defined in an entire dimension, but on a part of it.
+This basically means, they project from a specific dimension to a point in $\mathbb{R}$.
 
 Examples for this sort of function in $\mathbb{R}^2$ include:
 
@@ -650,7 +650,13 @@ z will depend on both variables. We write this formally as:
     \{ (x,y,z) \in \mathbb{R}^3 | z = f(x,y) \}
 \end{gather}
 
-\paragraph{Example}
+generally, we can say:
+
+\begin{itemize}
+    \item If k < 0, there's no solution
+    \item If k = 0, then it's a point
+    \item If k>0, it's an elyptic form
+\end{itemize}
 
 \section{Surface Curves}
 
