@@ -700,10 +700,58 @@ Now, we can decide that 'x = 0' and we can try and check for values on which thi
 
 \section{Limits and Continuity}
 
+For this course, limits will be a fairly important mathematical operation. We
+can imagine that limits can be described as:
+
+\begin{gather}
+    \lim_{x \to x_0} = L \implies \forall_{\epsilon > 0} \exists \delta > 0 \ if \ 0 < |x-x_0| < \delta \implies |f(x) - L| < \epsilon
+\end{gather}
+
+This means that for every number $\epsilon > 0$, there exists a $\delta >0$.
+this will allow us to define ranges on which a function exists. epsilon and delta are but 
+mathematical definitions of vertical and horizontal values for us to make a limit valid or invalid.
+
+this definition is valid for limits with a single component, for multiple variables, we can assume:
+
+\begin{gather}
+    \lim_{x \to x_0} = L \implies \forall_{\epsilon > 0} \exists \delta > 0 \ if \ 0 < ||(x,y) - (x_0, y_0)|| < \delta \implies |f(x,y) - L| < \epsilon
+\end{gather}
+
+There are cases in which a limit exists and some others for which it doesn't. 
+
 $$\lim f(x,y) \to L \implies (x,y) \to (a,b)$$
 
 A limit doesn't exist if there is two ways of approaching the same point
-for which the value of the limit is different. 
+for which the value of the limit is different. This can be seen when 
+
+
+\paragraph{Example}
+
+Solve:
+
+$$\frac{xy}{x^2 + y^2}$$
+
+\textit{\textbf{Solution}}
+
+If we try to separate the values, we might get this
+
+\begin{gather}
+    \lim_{x \to 0} \frac{x \cdot 0}{x^2 + 0^2} = \lim_{x \to x_0} \frac{0}{x^2} = 0\\
+    \lim_{y \to 0} \frac{y \cdot 0}{0^2 + y^2} = \lim_{y \to y_0} \frac{0}{y^2} = 0
+\end{gather}
+
+It would appear as if the limit existed,
+but if we take them as a line of the form x=y, then we might get:
+
+\begin{gather}
+    \lim_{x \to 0} \frac{x \cdot x}{x^2 + x^2} = \lim_{x \to 0} \frac{x^2}{2x^2} = \frac{1}{2}  
+\end{gather}
+
+This doesn't exist, because 0 is different to $\frac{1}{2}$
+
+Given the last example, how can we approach a function on infinite ways?
+for this, we can imagine a line $ y = mx $ that can generalize all the possible lines in the plane. However, this can
+also be done as explained in section 3.4.1, where we can establish a conversion to polar coordinates that will help our calculations.
 
 \paragraph{Example}
 
@@ -739,7 +787,8 @@ so for example, you could pass a limit as such:
     \lim_{(x,y) \to (0,0)} F(x,y) = \lim_{\rho \to 0} f(\rho \cos{\theta}, \rho \sin{\phi})
 \end{gather}
 
-Then, we can evaluate rho as a single coordinate
+Then, we can evaluate rho as a single coordinate. This will also allow us to say that a limit exists
+with certainty. 
 
 \paragraph{Example}
 
@@ -749,15 +798,27 @@ $$\lim_{(x,y)\to(0,0)} \frac{e^{x^2 + y^2} - 1}{x^2 + y^2}$$
 
 \textit{\textbf{Solution}}
 
-\begin{gather}
-    \lim_{\rho \to 0} \frac{e^{\rho^2 \cos^2\theta + \rho^2 \sin^2\theta} - 1}{\rho^2 \cos^2\theta + \rho^2 \sin^2\theta}\\
-    <l'hopital>\\
-    \lim_{\rho \to 0} \frac{e^\rho^2 - 1}{r^2}\\
-    \lim_{\rho \to 0} \frac{2\rho e^{\rho^2}}{r\rho}\\
-    \lim_{\rho \to 0} e^{\rho^2} = 1
-\end{gather}
-
 it doesn't exist, for it doesn't tend to the values we expected. This is a process that would've been a lot more tedious if we did the separation that we 
 applied for our previous example.
+
+
+\paragraph{Example}
+
+evaluate the following limit in its polar form: $$\frac{x^2}{x^2+y^2}$$
+
+\textit{\textbf{Solution}}
+
+\begin{gather}
+    \lim_{r \to 0} \frac{(r^2 \cos^2{\theta})}{r^2}\\
+    \lim_{r \to 0} = \cos^2{\theta} 
+\end{gather}
+
+Since it depends on $\theta$, then the limit does not exist. This is because theta might vary to values different from
+what we want. 
+
+\subsubsection{The limits of polar coordinates as a method}
+
+It is possible that some limits, especially but not uniquely those that have targets different to (0,0), might break when trying to 
+evaluate them through polar coordinates. A limit might break under a bunch of circumstances 
 
 \end{document}
