@@ -843,4 +843,66 @@ And, on two variables this can be seen as:
 
 You can generalize it to $\mathbb{R}^n$
 
+\section{Derivation/Differentiation}
+
+\subsection{Partial Derivatives}
+
+let:
+
+\begin{gather}
+    f(x,y) \mathbb{R}^2 \to \mathbb{R}
+\end{gather}
+
+Then we can imagine a derivation in respect of a single term, this will mean we'll take any 
+other value as a sort of constant, that we will end up treating as such.
+
+We can notate a derivation of this kind as $$\frac{\partial f}{\partial x}$$
+
+\paragraph{Example}
+
+Generate the partial derivatives of the following function:
+
+$$f(x,y) = \frac{e^{y^{2}}}{x^2+y^2}$$
+
+\textit{\textbf{Solution}}
+
+\begin{gather}
+    \frac{\partial f}{\partial x} = \frac{0 \cdot (...) - e^y^2 2x}{(x^2+y^2)^2} == \frac{}{}\\
+    \frac{\partial f}{\partial y} = \frac{2y e^{y^{2}} \cdot x^2+y^2 - e^{y^{2}} 2y }{(x^2+y^2)^2}\\
+    \frac{\partial f}{\partial y} = \frac{2y e^{y^{2}} \cdot x^2+y^2 - e^{y^{2}} 2y }{(x^2+y^2)^2}\\
+\end{gather}
+
+\subsection{Tangent Planes}
+
+The plane tangent to the graph of a function f(x,y) in a point $(x_0, y_0)$
+follows the following equation:
+
+$$z = f(x_0, y_0) + \frac{\partial f}{\partial x} (x_0, y_0) [x - x_0] + \frac{\partial f}{\partial y} (x_0, y_0) [y - y_0] $$
+
+\paragraph{Example}
+
+Find the tangent plane to the graph $$f(x,y) = \frac{e^{y^{2}}}{x^2+y^2}$$ in the point (2,1)
+
+\textit{\textbf{Solution}}
+
+From our example of partial derivatives, we can say:
+
+\begin{gather}
+    f(2,1) = \frac{e}{5}\\
+    \frac{\partial f}{\partial x} (2,1) =  \frac{-4e}{25}\\
+    \frac{\partial f}{\partial y} (2,1) =  \frac{8e}{25}
+\end{gather}
+
+Therefore, we can write this plane as:
+
+\begin{gather}
+    z = \frac{e}{5} + \frac{-4e}{25}(x - 2) + \frac{8e}{25}(y - 1)
+\end{gather}
+
+once expanded, it will translate to a plane when graphed.
+
+\paragraph*{Note}
+
+The normal vector to a tangent plane is $$\vec{n} = (\frac{\partial f}{\partial x} (x_0, y_0), \frac{\partial f}{\partial y} (x_0, y_0), -1)$$
+
 \end{document}
