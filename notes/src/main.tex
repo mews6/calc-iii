@@ -965,17 +965,34 @@ exist. Then
 When we have a derivative that is composed of two functions, we can then 
 calculate the derivative such as:
 
+\subsubsection{First chain rule case}
+
+On our first case, given a composed function, we can say:
+
 \begin{gather}
     F(g(x))' = f'(g(x))\cdot g'(x)\\ <\text{Also written as:}> \\
     \frac{d(f^og)}{dx} = \frac{df}{dx}(g(x)) \cdot \frac{dg}{dx}
 \end{gather}
 
-\subsubsection{First chain rule case}
+we can write also write the chain rule as:
+
+\begin{gather}
+    \frac{d(f(g(t)))}{dt} = \nabla f(g(t)) \cdot g'(t)
+\end{gather}
 
 \begin{gather}
     g: \mathbb{R}^2 \to \mathbb{R}\\
     f: \mathbb{R}^2 \to \mathbb{R}\\
     f^o g \mathbb{R} \to \mathbb{R}
+\end{gather}
+
+\subsubsection{Second chain rule case}
+
+given $$f: \mathbb{R}^2 \to \mathbb{R} | g: \mathbb{R}^2 \to \mathbb{R}$$
+we might have a situation where these two functions depend on two other variables u,v. Then:
+
+\begin{gather}
+    \frac{\partial f(x(u,v), y(u,v))}{\partial u} = \frac{\partial f}{\partial x} (f(x(u,v), y(u,v))) \cdot \frac{\partial f}{\partial u} (u,v) + \frac{\partial f}{\partial y} (f(x(u,v), y(u,v))) \cdot \frac{\partial f}{\partial u} (u,v)
 \end{gather}
 
 \section{Theorems}
