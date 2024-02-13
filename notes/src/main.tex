@@ -928,6 +928,40 @@ In a similar fashion, the normal vector to a surface in a point is basically the
 
 $$(\frac{\partial f}{\partial x} (x_0, y_0), \frac{\partial f}{\partial y} (x_0, y_0), -1)$$
 
+\section{Gradients}
+
+given $$f(x,y) : \mathbb{R}^2 \to \mathbb{R}$$
+
+the gradient of f(x,y) is defined as:
+
+$$\nabla f(x,y) = (\frac{\partial f}{\partial x} (x,y), \frac{\partial f}{\partial y} (x,y))$$
+
+and we have to take into account that:
+
+$$\nabla f(x,y): \mathbb{R}^2 \to \mathbb{R}$$
+
+given all of this, if f(x,y) is differentiable in $(x_0, y_0)$, then we can assume:
+
+\begin{gather}
+    f(x,y) ; f(x_0, y_0) + \nabla f(x_0, y_0) \begin{pmatrix}
+        x - x_0 \\ y _ y_0
+    \end{pmatrix}
+\end{gather}
+
+this is an approximation for most situations where this happens, however this can also be written in a more precise
+way if we assume it as:
+
+If f is differentiable in $(x_0, y_0)$ and $$\frac{\partial f}{\partial x} (x_0, y_0) , \frac{\partial f}{\partial y} (x_0, y_0)$$
+exist. Then
+
+\begin{gather}
+    \lim_{(x,y) \to (x_0, y_0)} \frac{f(x,y) - (f(x_0, y_0) + \nabla f(x_0, y_0) \begin{pmatrix}
+        x - x_0 \\ y _ y_0
+    \end{pmatrix})}{||(x,y) - (x_0, y_0)||}
+\end{gather}
+
+
+
 \section{Theorems}
 
 \paragraph{Theorem 8}
