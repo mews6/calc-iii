@@ -1062,6 +1062,28 @@ if f(x,y) has second derivatives and they're continuous, then:
     \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial^2 f}{\partial x \partial y}  
 \end{gather}
 
+\section{Directional Derivatives}
+
+We can talk about a directional derivative for the function 'f' in the direction 'V' as:
+
+\begin{gather}
+    F_{\vec{v}} f(p) = \frac{\lim_{h \to 0} f(p+hv) - f(p)}{h}
+\end{gather}
+
+This is the infinitesimal exchange rate towards v of a function f in p.
+
+Given we have the chain rule, we can rewrite this as:
+
+\begin{gather}
+    \frac{d}{df}(f(p+tv)) ; t = 0
+\end{gather}
+
+and since we can use partial derivatives, we can use them too to rewrite as:
+
+\begin{gather}
+    D_{\vec{v}} f(p) = \nabla f(p) \cdot \vec{v} = ||\nabla f(p)|| \cdot ||\vec{v}|| \cos{\theta}
+\end{gather}
+
 \section{Theorems}
 
 \paragraph{Theorem 8}
