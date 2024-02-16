@@ -1078,9 +1078,88 @@ Given we have the chain rule, we can rewrite this as:
     \frac{d}{df}(f(p+tv)) ; t = 0
 \end{gather}
 
-and since we can use partial derivatives, we can use them too to rewrite as:
+A directional derivative is given by:
+
+\begin{equation}
+    D_{\vec{u}}f(x_0,y_0) = \frac{d}{dt} f(x_0 + t u_1, y_0 + t u_2) ; t = 0
+\end{equation}
+
+And we say that if a derivative exists, then $||\vec{u}|| = 1$;
+f depends on x and y, and x and y both depend on t, this can be seen mathematically as:
+
+\begin{equation}
+    \frac{df}{dx} f(x_0 + t u_1, y_0 + t u_2) \underbrace{U_1}_{\frac{dx}{dt}} + \frac{df}{dy}(x_0 + t u_1, y_0 + t u_2) \underbrace{U_2}_{\frac{dy}{dt}}
+\end{equation}
+
+from this we can observe
+\begin{equation}
+    D_{\vec{u}}\ f(x_0, y_0) = \vec{\Delta} f(x_0, y_0) \centerdot \vec{u} = ||\vec{\Delta} f(x_0,y_0)|| \centerdot ||\vec{u}|| \centerdot \cos \theta\\
+\end{equation}
+
+So, given this set of conditions:
+
+\begin{gather}
+    \begin{cases}
+        D_{\vec{u}} f(x_0, y_0) \text{  is maximal if $ \theta $ is 0} \\
+        D_{\vec{u}} f(x_0, y_0) \text{  is minimal if $ \theta $ is $\pi$}
+    \end{cases}
+\end{gather}
+
+We can infer then, regarding our direction:
+
+\begin{equation}
+    \vec{u} = \frac{\vec{\Delta} f(x_0, y_0)}{||\vec{\Delta}f(x_0,y_0)||}
+\end{equation}
+
+will make the function grow faster, and:
+
+\begin{equation}
+    \vec{u} = - \frac{\vec{\Delta} f(x_0, y_0)}{||\vec{\Delta}f(x_0,y_0)||}
+\end{equation}
+
+will make it decrease faster.
 
 
+
+\subsection{implicit equations}
+
+An implicit surface equation given by $F(x,y,z) = C$ we can define, as a curve:
+
+\begin{gather}
+    \vec{r}t = <x(t),y(t),z(t)> \\
+    \vec{r}t' = <x'(t),y'(t),z'(t)> 
+\end{gather}
+
+And from there we can assume that this curve is a part of S if:
+
+\begin{gather}
+    F(x(t), y(y), z(t)) = C ; \forall t
+\end{gather}
+
+Given this, F depends on x,y, and z and those three variables depend on t, allowing us
+to affirm:
+
+\begin{gather}
+    F_x \frac{dx}{dt} + F_y \frac{dy}{dt} + F_z \frac{dz}{dt} \\
+    \vec{\Delta} f \centerdot \vec{r}t' = 0
+\end{gather}
+
+geometrically this means the gradient is perpendicular to the tangent and therefore, the tangent plane.
+to S in $(x_0,y_0,z_0)$, which can be expressed vectorially (and therefore, more usefully) as:
+
+\begin{equation}
+    \vec{\Delta}F(x_0,y_0,z_0) \centerdot \begin{pmatrix}
+        x - x_0 \\ 
+        y - y_0 \\ 
+        z - z_0
+    \end{pmatrix} = 0
+\end{equation}
+
+The line normal to S in $(x_0,y_0,z_0)$ can be defined as:
+
+\begin{equation}
+    \vec{n}(t) = \vec{x_0} + t\vec{\Delta} F(x_0,y_0,z_0)
+\end{equation}
 
 \begin{gather}
     D_{\vec{v}} f(p) = \nabla f(p) \cdot \vec{v} = ||\nabla f(p)|| \cdot ||\vec{v}|| \cos{\theta}
