@@ -1228,8 +1228,28 @@ is differentiable in $(x_0,y_0)$
 
 \chapter{Optimization}
 
-We can 
+\section{Global Optimization}
 
-\section*{Global Optimization}
+\section{Optimization with equality restrictions}
+
+We can restrict the range of a function to find the local minimum and maximum points in 
+a specific set. 
+
+For example let a function we're optimizing, that we'll call an objective function:
+$$x^2 + y^2 -x+y$$ And we'll have a restriction we call the factible set, such as $$x^2+y^2=1$$.
+
+Since $x^2+y^2-x+y$ is continuous in the set $x^2+y^2=1$ and the set
+$x^2+y^2=1$ is closed and bound, for the extreme value theorem the problem has a solution.
+
+\section{Lagrange Multipliers}
+If f(x,y); g(x,y) are differentiable, such as we have $(x_0,y_0)$ that are maximum or minimum
+of f(x,y) when bound to g(x,y) = C, then if $\nabla g(x_0, y_0) \neq \vec{0}$ , it means there exists a $\lambda \in \mathbb{R}$
+
+We can write this as:
+
+\begin{gather}
+    \nabla f(x_0,y_0) = \lambda \nabla g(x_0, y_0)
+\end{gather}
+
 
 \end{document}
