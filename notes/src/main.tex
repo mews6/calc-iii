@@ -1251,5 +1251,121 @@ We can write this as:
     \nabla f(x_0,y_0) = \lambda \nabla g(x_0, y_0)
 \end{gather}
 
+\begin{example}
+    let $$f(x,y) = x^2 +4x +y^2 +9$$ bound to:
+    $$x^2 + y^2 = 9$$
+    Then:
+    \begin{gather}
+        \nabla f(x,y) = (2x+4, 2y)\\
+        \nabla g(x,y) = (2x,2y)\\
+        \begin{cases}
+            2x+4 = \lambda 2x\\
+            2y = \lambda 2y
+        \end{cases}
+    \end{gather}
+\end{example}
+
+Imagine the following function:
+
+$$ z =  x^2 + xy + y^2 $$
+
+with every point being part of $\mathbb{R}^2$, if we were to find local minimums and maximums,
+therefore:
+
+\begin{gather}
+    f(x,y) =  x^2 + xy + y^2 \\
+    \partial_x = 2x + y\\
+    \partial_y = x + 2y\\
+    \begin{cases}
+        2x + y = 0\\
+        x + 2y = 0
+    \end{cases}
+    \implies \begin{pmatrix}
+        2 & 1 \|\ 0\\
+        1 & 2 \|\ 0\\
+    \end{pmatrix}\\
+    x=0 ; y=0\\
+    (0,0)
+\end{gather}
+
+from there, we can imagine a Hessian matrix.
+
+
+
+\section{Implicit function theorem}
+
+Let a function 'F(x,y) = 0' that is the implicit equation of a curve in xy;
+then:
+
+\paragraph*{Example}
+\begin{gather}
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0 \\
+    y = \pm \sqrt{(1-\frac{x^2}{a^2})b^2} = \pm \sqrt{\frac{b^2}{a^2}(a^2 - x^2)}; x \exists [-a, a]
+\end{gather}
+
+This is an example of a situation where fiven F(x,y)=0 and $ (x_0, y_0) $, expressed together
+as $F(x_0,y_0)=0$ we would like to know if we gan obtain
+
+\subsection{Theorem 1}
+Let:
+
+\begin{itemize}
+    \item a F(x,y) defined and continuous in a rectangle centered on our point $(x_0, y_0)$; then
+    $ D = [x_0 - \triangle, x_0 + \triangle; y_0 - \triangle, y_0 + \triangle] $
+    \item $F(x_0, y_0) = 0$
+    \item $y \rightarrow F(x,y)$ increases (or reduces) in a strictly monotonous fashion.
+\end{itemize}
+
+Then:
+
+\begin{itemize}
+    \item in a vecinity of the point, (*) can determine as a function of $x: y = f(x)$
+    \item $f(x_0) = y_0$
+    \item f is continuous
+\end{itemize}
+
+\subsection{Theorem 2}
+
+We'll assume, besides that we assumed on our first theorem:
+\begin{itemize}
+    \item $F_y = (x_0,y_0) \neq 0$
+    \item $\partial_x, \partial_y$ exist and are continuous.
+\end{itemize}
+
+Then, including what we concluded on the first iteration, we can conclude that:
+\begin{itemize}
+    \item in a vecinity of the point, (*) can determine as a function of $x: y = f(x)$
+    \item $f(x_0) = y_0$
+    \item f is continuous
+    \item f'() exists and is continuous
+\end{itemize}
+
+let's remember a function is differentiable when:
+
+\begin{gather}
+    F_x (x,y) \Delta x + F_y (x,y) \Delta y + \epsilon_1 \Delta x + \epsilon_2 \Delta y, \epsilon_1, \epsilon_2 \rightarrow 0 \\
+    = \Delta x (F_x(x,y) + \epsilon_1) + \Delta y (F_y (x,y)+ \epsilon_2) \\
+    \frac{\Delta y}{\Delta x} = - \frac{F_x + \epsilon_1}{F_y = \epsilon_2}, \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = - \frac{F_x(x,y)}{F_y(x,y) \neq 0}\\
+    f'(x)
+\end{gather}
+
+\subsection{Theorem 3}
+
+We assume:
+\begin{itemize}
+    \item $F(x_1,\dots,x_n, y)$ is defined and continuous over $D = [\dots]$
+    \item $f(x_1^0,\dots,x_n^0,y_0) = 0$ \\
+    \item $f_y \neq 0$
+    \item $f_{x1}, \dots, f_{xn}, f_y$ exist and are continuous
+\end{itemize}
+
+then:
+
+\begin{itemize}
+    \item in a vecinity $(x_1^0, \dots, x_n^0, y_0),(**)$ determines as a function
+\end{itemize}
+
+
+
 
 \end{document}
