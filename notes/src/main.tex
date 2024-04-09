@@ -1637,11 +1637,28 @@ If such limit exists. It's of notice that such limit will exist if B is a closed
 If the limit doesn't exist, then a triple integral does not exist either.
 
 So, given a three-dimensional region, we can express bounds through the limits of an integral.
-Given a specific shape, and the volume 
+Given a specific shape, and the volume.
 
 \subsection{Center of Mass}
 
 
+
+\subsection{Inertia Momentum}
+
+We can calculate the inertia momentum of a specific solid body through a triple integral.
+
+\begin{example}
+    Given a cylinder of constant density and a specific radius and height, calculate the inertia momentum.
+    \begin{gather}
+    \underbrace{
+        \begin{cases}
+            I_X = \int{\int{\int{x^2 + y^2}}}_{E} d dV\\
+            V_0 | (E) = \pi R^2 h        
+        \end{cases}}_{\text{Initial Conditions}}\\
+        \underbrace{\int \int \int}_{E} (x^2 + y^2) dV = d \int_{0}^h \int_{0}^{2 \pi} \int_{0}^R r^2 \cdot r dr d\theta dz\\
+        d (\int_{0}^h dz) (\int_{0}^{2 \pi} d\theta) (\int_{0}^R r^3 dr) = (dh \cdot 2\pi \frac{r^4}{4})|_{0}^{R}
+    \end{gather}
+\end{example}
 
 \section{Function geometry for functions of the type $\mathbb{R}^2 \to \mathbb{R}^2$}
 
