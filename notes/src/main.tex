@@ -1703,6 +1703,40 @@ Keep in mind, even though every operation so far in this section is linear, not 
 
 \end{example}
 
+\section{Change of Variables}
+
+We might have cases on which a specific integral is easier to calculate 
+when the frame of reference is modified. This will especially happen in non-symmetrical or rectangular triangles
+and on parallelograms.  
+
+\begin{example}
+    let:
+    $${\int\int}_{R} (x-y) dydx$$
+    Where R is the parallelogram uniting the points (1,2), (3,4), (4,3) and (6,5).
+
+    \textbf{\textit{Solution}}
+
+    We're going to assume the following region to change our variables.
+    \begin{gather}
+        \begin{cases}
+            u = x-y \\ v = x-3y
+        \end{cases}
+    \end{gather}
+
+    And from here, we can use the Jacobian.
+
+    \begin{gather}
+        \frac{\partial(u,v)}{\partial(x,y)} = \begin{pmatrix}
+            \frac{\partial u}{\partial x} \ \frac{\partial u}{\partial y}\\
+            \frac{\partial v}{\partial x} \ \frac{\partial v}{\partial y}
+        \end{pmatrix} = 2
+    \end{gather}
+
+    So we rewrite:
+    \begin{gather}
+        {\int\int}_R (x-y) dydx = {\int\int}_S u | \frac{1}{2} | dudv
+    \end{gather}
+\end{example}
 
 
 
