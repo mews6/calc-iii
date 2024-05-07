@@ -1739,5 +1739,226 @@ and on parallelograms.
 \end{example}
 
 
+\chapter{Trayectory Integration}
+
+Let: 
+
+$f: \mathbb{R}^3 \to \mathbb{R}; \curlyvee, \vec{r}(t), a \leq t \leq b$
+
+Then we can say:
+
+$\int_\curlyvee f ds := \int_a^b f(\vec{r}(t)) ||\vec{r}'t|| dt$
+
+\section{Line Integrals}
+
+In physics, you can calculate work via the following formula:
+
+\begin{gather}
+    W = f \cdot d
+\end{gather}
+
+however, this can be generalized to:
+
+\begin{equation}
+    \int_c \vec{F}(\vec{r}(t_i)) \cdot \Delta \vec{r} (t_i)
+\end{equation}
+
+This can also gives us arc length, it is of note 
+
+\section{Parametrizized surfaces}
+
+If $S, \vec{r}(u,v)$, we can define a revolution surface as 
+
+$\begin{cases}
+x = x \\
+y = f(x)\cos{\theta}\\
+z = f(x)\sin{\theta}    
+\end{cases} ; a \leq x \leq b; 0 \leq \theta 2 \pi$
+
+and from then, we can check for smoothness as:
+
+$ \vec{r}_u x \vec{r}_v \neq \vec{0} $
+
+If 'S' is smooth, we have a tangent plane. Otherwise there might be a surface, but it will be more complex.
+
+We can calculate the area of a surface of this kind as:
+
+\begin{equation}
+    {\int\int}_D ||\vec{r}_u \ x \ \vec{r}_v|| dA
+\end{equation}
+
+If we have an imlicit surface such as $z = f(x,y)$ this can be seen as:
+
+\begin{equation}
+    {\int\int}_D \sqrt{1 + f_x^2 + f_y^2} dA
+\end{equation}
+
+Imagining a trajectory, defined as $\vec{r}(t) = <x(t),y(t),z(t)>$ we can
+
+If we have a conservative field such as $\vec{F} = \Delta f$
+then $\int_c \vec{r} d\vec{r} = f(\vec{r}(b)) - f(\vec{r}(a))$
+
+
+
+\section{Area of a Surface}
+
+\begin{equation}
+    {\int\int}_D ||\vec{r}_u x \vec{r}_v|| dA 
+\end{equation}
+
+However, if a surface is implicit we can say:
+
+\begin{gather}
+    \vec{r}_x x \vec{r}_y = \begin{pmatrix}
+        1\\0\\f_x
+    \end{pmatrix} x \begin{pmatrix}
+        0\\1\\f_y
+    \end{pmatrix} = \begin{pmatrix}
+        - f_x \\ - f_y \\ 1
+    \end{pmatrix}\\
+    ||\vec{r}_x x \vec{r}_y|| = \sqrt{1 + f_x^2 + f_y^2}
+\end{gather}
+
+from this we gather:
+
+\begin{gather}
+    A(S) = {\int\int}_D \sqrt{1 + f_x^2 + f_y^2} dA
+\end{gather}
+
+
+\section{Curve Integrals}
+
+Let:
+
+$\int\int f dS$ -> area of a surface
+
+then it equals:
+
+${\int\int}_D f(\vec{r}(u,v)) ||\vec{r}_u x \vec{r}_v|| dA$
+
+It is possible to integrate over a curve. The physical meaning might change depending on the specifics;
+So let:
+
+$$ Curve \ : \ \sigma(t) ; a \leq t \leq b$$
+
+We can say that for example, if we had a curve 
+
+$$\sigma(t) = (\overbrace{2\cos(t)}^{x(t)}, \overbrace{2\sin(t)}^{y(t)}) $$
+
+We can probably parametrize t such as an Area might be found
+
+$$A = \int f ds = \int_a^b f(\sigma(t)) \cdot ||\sigma ' (t)|| dt $$
+
+
+\section{Examples}
+
+\paragraph*{Find: $\int_C xy dx + x^2 dy$ where $ C \in [[2,1],[4,1],[4,5]]$}
+
+\begin{gather}
+    \int_{c_1} xy dx + x^2 dy \\
+    \int_2^4 x dx + \int_1^5 16 dy \\
+    [\frac{x^2}{2}]|_2^4 + [16y]|_1^5\\
+    (\frac{4^2}{2} - \frac{2^2}{2}) + ((16 \cdot 5) - 16)\\
+    70
+\end{gather}
+
+\paragraph*{Find mass of a cable with density $p(x,y) = xy^2$}
+
+\begin{gather}
+    m = \int_c \rho(x,y) ds\\
+    \int_0^{\frac{\pi}{2}} \cos \theta \sin^2 \theta d\theta\\
+    [\frac{\sin^3 \theta}{3}]_0^{\frac{\pi}{2}} = \frac{1}{3}\\
+    \frac{1}{3}
+\end{gather}
+
+\paragraph*{find a parametrization of a surface}
+
+\paragraph*{Find the tangent plane to $\begin{cases}
+x = u^2 + 1 \\
+y = v^3 + 1 \\
+z = u+v
+\end{cases}$}
+
+\begin{gather}
+    \vec{r}_u (u_0, v_0) x \vec{r}_v (u_0, v_0)\\
+    3 = u + 1 \implies u = 2\\
+    2 = v^3 + 1 \implies v = 1\\
+    \vec{r}_u (u_0, v_0) x \vec{r}_v (u_0, v_0) = \begin{pmatrix}
+        24 \\ 0 \\ 1
+    \end{pmatrix}|_{(2,1)}\
+    x\begin{pmatrix}
+        0 \\3v^2 \\ 1
+    \end{pmatrix}|_{(2,1)}
+    = \begin{pmatrix}
+        4 \\0 \\1
+    \end{pmatrix} x \begin{pmatrix}
+        0 \\3\\1
+    \end{pmatrix} \implies \begin{pmatrix}
+        -3 \\ -4 \\ 12
+    \end{pmatrix}\\
+    <-3,-4,12> \cdot <x,y,z> = <-3,-4,12> \cdot <5,2,3>
+\end{gather}
+
+\section{Green's theorem.}
+
+Let it be us functioning in $\mathbb{R}^2$, then:
+
+\begin{gather}
+    \int m dx + Ndy = \int \int_R (N_x - M_y) dA \\
+    A(R) = \frac{1}{2} \int_c x dy - y dx\\
+    W = \int_c \vec{F} d\vec{r} = \int \int_R (\vec{\nabla} x \vec{F}) \cdot k dA
+\end{gather}
+
+\section{Stokes' Theorem}
+
+Stokes' Theorem works a bit like Green's, but concerned with surfaces. Therefore, we'll be talking on $\mathbb{R}^3$ .
+Given a 'S' surface oriented towards $\partial S$, a vectorial field $\vec{F} ; \vec{F} \in C'$ we can affirm:
+
+\begin{gather}
+    \int_c \vec{F} d\vec{r} = {\vec\vec}_S (\vec{\nabla} x \vec{F}) d\vec{S}\\
+    = {\vec\vec}_S (\vec{\nabla} x \vec{F}) \cdot \vec{n} dS
+\end{gather}
+
+\section{Fundamental theorem for line integrals}
+
+Let a conservative vectorial field that has a line integral, then we can affirm
+
+$$\int_S \vec{F} d\vec{r} = f(r(\vec{b})) - f(r(\vec{a}))$$
+
+\section{Conservative fields}
+
+As we know, a conservative field is $\vec{F}$ such as 
+$\vec{F} \implies \vec{\nabla} \vec{F} = 0$ and
+$\int_{x,y,z}^{x,y,z} \vec{F} dr$ is independent of trajectory.
+
+therefore, we can demonstrate:
+
+\begin{gather}
+    \vec{\nabla} \vec{F} = 0 \implies \int_{C_1} \vec{F} dr = \int_{C_2} \vec{F} dr\\
+    \int_{C_1} \vec{F} dr - \int_{C_2} \vec{F} dr = 0 \\
+    \int_{C_1 - C_2} \vec{F} dr = 0\\
+\end{gather}
+
+We can now use Stokes' Theorem to affirm that:
+
+\begin{gather}
+    {\int \int}_S
+\end{gather}
+
+\subsection{Equivalent conditions for a vectorial field.}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\section{Gauss' Divergence Theorem}
+
+For a final time.
+
+Let a vectorial field $\vec{F}$ that's smooth, closed, bound in a region, we can affirm:
+
+\begin{gather}
+    {\int \int}_S \vec{F} d\vec{S} = {\int \int \int}_R \vec{\nabla} \cdot \vec{F} dV 
+\end{gather}
 
 \end{document}
