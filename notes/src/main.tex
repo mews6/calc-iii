@@ -1924,15 +1924,27 @@ And with an usual form, we can affirm as a rewrital of the former:
     \oint P dx + Q dy = \int\int (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) dA 
 \end{gather}
 
+In essence, this is a particular form of Stokes' Theorem. Such as it works on a smaller set of dimensions.
+
 \section{Stokes' Theorem}
 
-Stokes' Theorem works a bit like Green's, but concerned with surfaces. Therefore, we'll be talking on $\mathbb{R}^3$ .
-Given a 'S' surface oriented towards $\partial S$, a vectorial field $\vec{F} ; \vec{F} \in C'$ we can affirm:
+Let a vectorial field 'F' such as it is distinct and differentiable in a whole surface 'S', Stokes' Theorem works a bit like Green's, but concerned with such surface. We'll be talking on $\mathbb{R}^3$ .
+Defined formally, given a 'S' surface oriented towards $\partial S$, a vectorial field $\vec{F} ; \vec{F} \in C'$ we can affirm:
 
 \begin{gather}
     \int_c \vec{F} d\vec{r} = {\vec\vec}_S (\vec{\nabla} x \vec{F}) d\vec{S}\\
     = {\vec\vec}_S (\vec{\nabla} x \vec{F}) \cdot \vec{n} dS
 \end{gather}
+
+Much like Green's Theorem, Stokes' has the general capacity to convert
+integrals. We can write it in quite the similar way, too, as we define it as:
+
+\begin{gather}
+    \oint F \cdot ds = \int\int_{\sum} (\nabla x F) \cdot \vec{n} dS
+\end{gather}
+
+where 'n' is a unit vector for the direction that flux is having on this surface. We can also notice how
+this definition will be equivalent to Green's Theorem when our framework is completely contained in $\mathbb{R}^2$
 
 \section{Fundamental theorem for line integrals}
 
