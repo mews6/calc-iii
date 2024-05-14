@@ -1901,12 +1901,27 @@ z = u+v
 
 \section{Green's theorem.}
 
-Let it be us functioning in $\mathbb{R}^2$, then:
+Let a function in $\mathbb{R}^2$, then:
 
 \begin{gather}
     \int m dx + Ndy = \int \int_R (N_x - M_y) dA \\
     A(R) = \frac{1}{2} \int_c x dy - y dx\\
     W = \int_c \vec{F} d\vec{r} = \int \int_R (\vec{\nabla} x \vec{F}) \cdot k dA
+\end{gather}
+
+What this means, is that we can, given a 'C' closed curve that is simple,
+(this meaning there's no autointersections) AND oriented in such a way as we have a positive 
+point of reference, which will happen mostly when the curve is oriented counter-clockwise and defined
+in the bound section, then we can vectorially affirm:
+
+\begin{gather}
+    \oint F \cdot d\vec{S} = \int\int (\nabla x F)\cdot \hat{k} dA
+\end{gather}
+
+And with an usual form, we can affirm as a rewrital of the former:
+
+\begin{gather}
+    \oint P dx + Q dy = \int\int (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) dA 
 \end{gather}
 
 \section{Stokes' Theorem}
@@ -1940,12 +1955,6 @@ therefore, we can demonstrate:
     \int_{C_1 - C_2} \vec{F} dr = 0\\
 \end{gather}
 
-\subsection{Equivalent conditions for a vectorial field.}
-
-\begin{itemize}
-    \item 
-\end{itemize}
-
 \section{Gauss' Divergence Theorem}
 
 Let a vectorial field $\vec{F}$ that's smooth, closed, bound in a region, we can affirm:
@@ -1953,5 +1962,47 @@ Let a vectorial field $\vec{F}$ that's smooth, closed, bound in a region, we can
 \begin{gather}
     {\int \int}_S \vec{F} d\vec{S} = {\int \int \int}_R \vec{\nabla} \cdot \vec{F} dV 
 \end{gather}
+
+\section{Examples}
+
+\begin{example}
+    Consider the vectorial field in $\mathbb{R}^2$:
+    $$f(x,y) = (6x^2 - 2xy^2 + \frac{y}{2\sqrt{x}}, -2xy^2 +4+ \sqrt{x})$$
+
+    Calculate the potential of this field.
+
+    \textit{\textbf{Solution}}
+
+    A potential is a function f(x,y) such as 
+    \begin{gather}
+        f(x,y) =
+        \begin{cases}
+            \frac{\partial f}{\partial x}(x,y)\\
+            \frac{\partial f}{\partial y}(x,y)\\
+        \end{cases}
+    \end{gather}
+    Therefore:
+    \begin{gather}
+        f(x,y) =
+        \begin{cases}
+            6x^2 - 2xy^2 + \frac{y}{2\sqrt{x}} = \frac{\partial f}{\partial x}\\
+            -2xy^2 + 4 + \sqrt{x} = \frac{\partial f}{\partial y}
+        \end{cases}\\ f(x,y) =
+        \begin{cases}
+            \int 6x^2 - 2xy^2 + \frac{y}{2\sqrt{x}}\\
+            \int -2xy^2 + 4 + \sqrt{x}
+        \end{cases}
+    \end{gather}
+\end{example}
+
+\begin{example}
+    Calculate the potential of:
+
+    f(x,y) = (x, y+2)
+
+    \textit{\textbf{Solution}}
+
+    
+\end{example}
 
 \end{document}
